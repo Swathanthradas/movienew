@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    <a class="btn btn-info" href="{% url 'movieapp:index' %}">Back</a>
+    <br>
+    <div class="card" style="width: 26rem; background-color:#ccffff; border:2px solid black;">
+        <div class="card-body">
+            <p><b>Are you sure that you want to delete the movie</b></p>
+        </div>
+    </div>
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input class="btn btn-danger" type="submit">
+</form>
+{% endblock %}
